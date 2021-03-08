@@ -2,3 +2,10 @@ venv/
 previous_code/
 .DS_Store
 .gitignore
+data/beforOneHotCoder.pickle
+data/forOneHotCoder.pickle
+converter.py
+deneme.py
+deneme2.py
+CreditDefault_copy.ipynb
+creditdefault.py
