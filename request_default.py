@@ -1,7 +1,7 @@
 import requests
 
-url = "http://127.0.0.1:5000/"
-
+# url = "http://127.0.0.1:5000/"
+url = "https://creditdefaultsesame.herokuapp.com/"
 payload = {
     "ID": "1",
     "LIMIT_BAL": "20000",
