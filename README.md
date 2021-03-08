@@ -52,15 +52,13 @@ A dataset from UCI called Default of Credit Card Clients Dataset is used in this
 
 - This server works as API. Please use below code or "request_default.py" to make a request. You can change the innput by changeing payload in the file.
 
-'''python
+```python
 import requests
 
 # server host the machine learning model
-
 url = "https://creditdefaultsesame.herokuapp.com/"
 
 # requested data input as dictionary
-
 payload = {
 "ID": "1",
 "LIMIT_BAL": "20000",
@@ -90,15 +88,12 @@ payload = {
 }
 
 # holds file and headers. These are empty now.
-
 files = []
 headers = {}
 
 # request a post
-
 response = requests.request("POST", url, headers=headers, data=payload, files=files)
 
 # response is written in the screen.
-
 print(response.text)
-'''
+```
