@@ -44,3 +44,61 @@ A dataset from UCI called Default of Credit Card Clients Dataset is used in this
 - **BILL_AMT1 to BILL_AMT6:** Amount of bill statement by n months ago ( BILL_AMT1 = last_month .. BILL_AMT6 = 6 months ago)
 - **PAY_AMT1 to PAY_AMT6:** Amount of payment by n months ago ( BILL_AMT1 = last_month .. BILL_AMT6 = 6 months ago)
 - **default:** Default payment (1=yes, 0=no) Target Column
+
+# Request
+
+- For this project the developed model is deployed to this server:
+  https://creditdefaultsesame.herokuapp.com/
+
+- This server works as API. Please use below code or "request_default.py" to make a request. You can change the innput by changeing payload in the file.
+
+'''python
+import requests
+
+# server host the machine learning model
+
+url = "https://creditdefaultsesame.herokuapp.com/"
+
+# requested data input as dictionary
+
+payload = {
+"ID": "1",
+"LIMIT_BAL": "20000",
+"SEX": "2",
+"EDUCATION": "2",
+"MARRIAGE": "1",
+"AGE": "24",
+"PAY_1": "2",
+"PAY_2": "2",
+"PAY_3": "-1",
+"PAY_4": "-1",
+"PAY_5": "-2",
+"PAY_6": "-2",
+"BILL_AMT1": "3913",
+"BILL_AMT2": "3102",
+"BILL_AMT3": "689",
+"BILL_AMT4": "0",
+"BILL_AMT5": "0",
+"BILL_AMT6": "0",
+"PAY_AMT1": "0",
+"PAY_AMT2": "689",
+"PAY_AMT3": "0",
+"PAY_AMT4": "0",
+"PAY_AMT5": "0",
+"PAY_AMT6": "0",
+"default payment next month": "1",
+}
+
+# holds file and headers. These are empty now.
+
+files = []
+headers = {}
+
+# request a post
+
+response = requests.request("POST", url, headers=headers, data=payload, files=files)
+
+# response is written in the screen.
+
+print(response.text)
+'''

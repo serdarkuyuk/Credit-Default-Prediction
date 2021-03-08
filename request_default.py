@@ -1,7 +1,9 @@
 import requests
 
-# url = "http://127.0.0.1:5000/"
+# server host the machine learning model
 url = "https://creditdefaultsesame.herokuapp.com/"
+
+# requested data input as dictionary
 payload = {
     "ID": "1",
     "LIMIT_BAL": "20000",
@@ -29,9 +31,12 @@ payload = {
     "PAY_AMT6": "0",
     "default payment next month": "1",
 }
+# holds file and headers. These are empty now.
 files = []
 headers = {}
 
+# request a post
 response = requests.request("POST", url, headers=headers, data=payload, files=files)
 
+# response is written in the screen.
 print(response.text)
