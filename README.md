@@ -50,7 +50,7 @@ A dataset from UCI called Default of Credit Card Clients Dataset is used in this
 - For this project the developed model is deployed to this server:
   https://creditdefaultsesame.herokuapp.com/
 
-- This server works as API. Please use below code or "request_default.py" to make a request. You can change the innput by changeing payload in the file.
+- The server works as API. Please use below code or "request_default.py" to make a request. You can change the input by changing payload in the file.
 
 ```python
 import requests
