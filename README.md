@@ -1,7 +1,5 @@
 # Default Credit Prediction
 
-## Credit Sesame Data Challenge
-
 H. Serdar Kuyuk - March 5, 2021
 
 # Summary
